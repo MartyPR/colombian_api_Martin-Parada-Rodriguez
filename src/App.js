@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+
+import { getAirports, getPresidents, getTouristAttractions } from './APIservice/service';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React, { useEffect } from 'react';
+
+
+const App = () => {
+  useEffect(() => {
+    getPresidents().then(data => console.log('Presidents:', data));
+    getAirports().then(data => console.log('Airports:', data));
+    getTouristAttractions().then(data => console.log('Tourist Attractions:', data));
+  }, []);
+
+  return <div>Check the console for data</div>;
+};
 
 export default App;
