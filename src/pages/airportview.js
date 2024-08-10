@@ -15,7 +15,7 @@ const AirportsView = () => {
   return (
     <div>
       <h2>Aeropuertos por Región</h2>
-
+        
     </div>
   );
 };
