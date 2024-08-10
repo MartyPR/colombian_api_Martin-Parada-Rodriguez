@@ -6,28 +6,21 @@ const PresidentsView = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getPresidents().then((presidents) => {
+    getPresidents().then((presidents) => {        
       setData(groupPresidentsByParty(presidents));
     });
+
+    console.log(data);
+    
   }, []);
+
+
 
   return (
     <div>
       <h2>Presidentes por Partido</h2>
       <ul>
-        {data.map(([party, presidents]) => (
-          <li key={party}>
-            <strong>{party}</strong>: {presidents.length} presidentes
-            <ul>
-              {presidents.map((president) => (
-                <li key={president.id}>
-                  {president.name} ({president.startPeriod} -{" "}
-                  {president.endPeriod})
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
+
       </ul>
     </div>
   );
