@@ -10,26 +10,26 @@ const PresidentsView = () => {
       setData(groupPresidentsByParty(presidents));
     });
   }, []);
-  console.log(data);
 
   return (
-    <div>
-      <h2>Presidentes por Partido</h2>
-      <ul>
-        {data.map(([party, element]) => (
-          <li key={party}>
-            <strong>{party}</strong>: {element.length} presidentes
-            <ul>
-              {element.map((president) => (
-                <li key={president.id}>
-                  {president.name} ({president.startPeriodDate} -{" "}
-                  {president.endPeriodDate})
+    <div className="container">
+      <h2 className="title">Presidentes por Partido</h2>
+      <div className="party-list">
+        {data.map(({ party, presidents }) => (
+          <div key={party} className="party-section">
+            <h3 className="party-name">
+              {party}: <span className="party-count">{presidents.length} presidentes</span>
+            </h3>
+            <ul className="presidents-list">
+              {presidents.map((president) => (
+                <li key={president.id} className="president-item">
+                  {president.name} ({president.startPeriodDate} - {president.endPeriodDate})
                 </li>
               ))}
             </ul>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

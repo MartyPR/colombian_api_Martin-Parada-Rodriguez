@@ -4,7 +4,7 @@ import TabComponent from '../pages/tabComponent';
 
 const ColombiaDash = () => (
   <div>
-    <h1>Colombia Dashboard</h1>
+    <h1 className='title'>Colombia Dashboard</h1>
     <TabComponent />
   </div>
 );
