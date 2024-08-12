@@ -1,3 +1,12 @@
+#Colombia API
+Este proyecto es un dashboard que utiliza datos de la API de Colombia para mostrar información sobre presidentes, aeropuertos y atracciones turísticas.
+## Instalación
+
+1. Clona el repositorio:
+
+git clone https://github.com/tu_usuario/colombian_api_......
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
