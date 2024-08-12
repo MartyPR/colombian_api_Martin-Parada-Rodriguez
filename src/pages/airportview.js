@@ -11,6 +11,8 @@ const AirportsView = () => {
       setData(groupAirportsByRegion(airports));
     });
   }, []);
+  console.log(groupedData);
+  
 
   return (
     <div className="container">

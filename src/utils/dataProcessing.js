@@ -99,3 +99,13 @@ export const groupAirportsByRegion = (airports) => {
   return result;
 };
 
+export const groupAirportRegionDepartmentCity=(airports)=>{
+  const groupedData={};
+  airports.forEach((airport)=>{
+    const { region } = airport;
+    const regionId = region.id;
+    const regionName = region.name || `Department-${regionId}`;
+    const DepartmentName = region.departments
+  })
+  return airports
+}
